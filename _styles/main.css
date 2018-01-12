@@ -1,0 +1,245 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	margin: 0; padding: 0;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+header {
+	background: url('../_images/background_header.jpg') no-repeat fixed;
+	background-size: cover;
+	min-height: 800px;
+	margin: 0 auto;
+	color: white;
+}
+.content_wrap {
+	max-width: 850px;
+	margin: 0 auto;
+	padding: 40px;
+	text-align: center;
+}
+h1 {
+	font-family: 'Abril Fatface', cursive;
+	font-size: 2em;
+}
+h2 {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 1.25em;
+}
+p {
+	line-height: 1.75em;
+	text-align: left;
+}
+ul {
+	list-style-type: none;
+	font-size: 0.8em;
+	margin: 0; padding: 0;
+	vertical-align: middle;
+	line-height: 2em;
+}
+.button {
+	margin: 40px 0;
+	padding: 15px 30px;
+	background: linear-gradient(rgb(199,214,79),rgb(111,160,33));
+	border: 0;
+	border-radius: 4px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	color: white;
+	cursor:pointer;
+}
+section {
+	max-width: 1300px;
+	margin: 0 auto;
+}
+#nations {
+	padding: 1% 0 0 5%;
+}
+#groups {
+	clear: both;
+}
+.seeds {
+	width: 15.5%;
+	float: left;
+}
+.seeds:last-of-type {
+	width: 11%
+}
+.flag {
+	margin-right: 15px;
+	padding-bottom: 3px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+/* Media Quieres */
+
+table {
+	max-width: 90%;
+	margin: 40px auto;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 0.75em;
+	border-collapse: collapse;
+}
+table h3 {
+	text-transform: uppercase;
+	font-size: 1em;
+}
+thead {
+	height: 50px;
+	background: #0084a4;
+	color: #fff;
+	text-align: left;
+}
+table tbody tr.tableSubheader {
+	height: 40px;
+	background: #26b4c9;
+	color: #fff;
+	font-weight: 600;
+}
+table tbody tr.teamRow {
+	height: 32px;
+	border-bottom: 1px solid #E6E6E6;
+}
+table tbody tr.topTwo {
+	background: #bbd14b;
+}
+table tbody tr td {
+	text-align: center;
+	width: 3%;
+}
+td.spacer {
+	width: 2%;
+}
+td.team {
+	width: 15%;
+	font-weight: bold;
+}
+td.pos {
+	width: 35px;
+}
+td.team, td.pos {
+	text-align: left;
+}
+td.scheduleHome {
+	width: 44%;
+	text-align: left;
+	padding-left: 10px;
+}
+td.scheduleAway {
+	width: 44%;
+	text-align: right;
+	padding-right: 10px;
+}
+td.scoreHome {
+	width: 4%;
+	text-align: left;
+	font-weight: 600;
+}
+td.scoreAway {
+	width: 4%;
+	text-align: right;
+	font-weight: 600;
+}
+td.scheduleBumper {
+ 	background: #E8E8E8;
+	width: 2%;
+}
+.accordion-control {
+  	background-color: #303030;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 0.5em 0.5em 0.5em 0.7em;
+  margin: 0;
+  border-top: 1px solid #666;}
+
+.accordion-panel {
+  display: none;}
+
+/* Media Quieres */
+
+@media (max-width: 899px) {
+	.hide {
+		display:none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

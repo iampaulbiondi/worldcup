@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Euro 2020 Qualification Randomizer</title>
+		<link rel="stylesheet" href="_styles/main.css">
+<!--		<link rel="stylesheet" href="_styles/jquery-ui-1.10.3.custom.min.css" />-->
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Playfair+Display" rel="stylesheet">
+		<script src="https://use.fontawesome.com/3881debf28.js"></script>
+		<script src="_js/script.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="content_wrap">
+				<img src="_images/UEFA_Euro_2020_Logo_White.png" width="200" alt="UEFA Euro 2020">
+				<h1>Euro 2020 Qualification Randomizer</h1>
+				<p>UEFA EURO 2020 will be held across 13 different European cities in the summer of 2020 as UEFA marks the 60th anniversary of the continent's top national-team competition. All 55 UEFA national teams are eligible to compete in the UEFA Euro 2020 qualifying tournament. The 55 members will be divided into ten groups, with five of them containing five teams, and five of the groups containing six teams.</p>
+			</div>
+		</header>
+		<section id="nations">
+<!--
+			<div class="seeds">
+				<h2>Pot One</h2>
+				<ul>
+					<li id="Russia"><img src="_images/_flags/russia.png" width="24" alt="Russia" class="flag">Russia</li>
+					<li id="Germany"><img src="_images/_flags/germany.png" width="24" alt="Germany" class="flag">Germany</li>
+					<li id="Portugal"><img src="_images/_flags/portugal.png" width="24" alt="Portugal" class="flag">Portugal</li>
+					<li id="Belgium"><img src="_images/_flags/belgium.png" width="24" alt="Belgium" class="flag">Belgium</li>
+					<li id="Poland"><img src="_images/_flags/poland.png" width="24" alt="Poland" class="flag">Poland</li>
+					<li id="Iceland"><img src="_images/_flags/iceland.png" width="24" alt="Iceland" class="flag">Iceland</li>
+					<li id="France"><img src="_images/_flags/france.png" width="24" alt="France" class="flag">France</li>
+					
+				</ul>
+			</div>
+			<div class="seeds" style="width: 16%">
+				<h2>Pot Two</h2>
+				<ul>
+					<li id="Spain"><img src="_images/_flags/spain.png" width="24" alt="Spain" class="flag">Spain</li>
+					<li id="Switzerland"><img src="_images/_flags/switzerland.png" width="24" alt="Switzerland" class="flag">Switzerland</li>
+					<li id="England"><img src="_images/_flags/england.png" width="24" alt="England" class="flag">England</li>
+					<li id="Croatia"><img src="_images/_flags/croatia.png" width="24" alt="Croatia" class="flag">Croatia</li>
+				</ul>
+			</div>
+			<div class="seeds" style="width: 18%">
+				<h2>Pot Three</h2>
+				<ul>
+					<li id="Denmark"><img src="_images/_flags/denmark.png" width="24" alt="Denmark" class="flag">Denmark</li>
+					<li id="Sweden"><img src="_images/_flags/sweden.png" width="24" alt="Sweden" class="flag">Sweden</li>
+					<li id="Czech Republic"><img src="_images/_flags/czechRepublic.png" width="24" alt="Czech Republic" class="flag">Czech Republic</li>
+					<li id="Bosnia"><img src="_images/_flags/bosniaHerzegovina.png" width="24" alt="Bosnia and Herzegovina" class="flag">Bosnia &amp; Herzegovina</li>
+					<li id="Turkey"><img src="_images/_flags/turkey.png" width="24" alt="Turkey" class="flag">Turkey</li>
+					<li id="Romania"><img src="_images/_flags/romania.png" width="24" alt="Romania" class="flag">Romania</li>
+					<li id="Scotland"><img src="_images/_flags/scotland.png" width="24" alt="Scotland" class="flag">Scotland</li>
+					<li id="Slovenia"><img src="_images/_flags/slovenia.png" width="24" alt="Slovenia" class="flag">Slovenia</li>
+					<li id="Hungary"><img src="_images/_flags/hungary.png" width="24" alt="Hungary" class="flag">Hungary</li>
+					<li id="Serbia"><img src="_images/_flags/serbia.png" width="24" alt="Serbia" class="flag">Serbia</li>
+					<li id="Albania"><img src="_images/_flags/albania.png" width="24" alt="Albania" class="flag">Albania</li>
+				</ul>
+			</div>
+			<div class="seeds">
+				<h2>Pot Four</h2>
+				<ul>
+					<li id="Serbia"><img src="_images/_flags/serbia.png" width="24" alt="Serbia" class="flag">Serbia</li>
+					<li id="Nigeria"><img src="_images/_flags/nigeria.png" width="24" alt="Nigeria" class="flag">Nigeria</li>
+					<li id="Montenegro"><img src="_images/_flags/montenegro.png" width="24" alt="Montenegro" class="flag">Montenegro</li>
+					<li id="Greece"><img src="_images/_flags/greece.png" width="24" alt="Greece" class="flag">Greece</li>
+					<li id="Israel"><img src="_images/_flags/israel.png" width="24" alt="Israel" class="flag">Israel</li>
+					<li id="Bulgaria"><img src="_images/_flags/bulgaria.png" width="24" alt="Bulgaria" class="flag">Bulgaria</li>
+					<li id="Finland"><img src="_images/_flags/finland.png" width="24" alt="Finland" class="flag">Finland</li>
+					<li id="Cyprus"><img src="_images/_flags/cyprus.png" width="24" alt="Cyprus" class="flag">Cyprus</li>
+					<li id="Estonia"><img src="_images/_flags/estonia.png" width="24" alt="Estonia" class="flag">Estonia</li>
+					<li id="Lithuania"><img src="_images/_flags/lithuania.png" width="24" alt="Lithuania" class="flag">Lithuania</li>
+					<li id="Azerbaijan"><img src="_images/_flags/azerbaijan.png" width="24" alt="Azerbaijan" class="flag">Azerbaijan</li>
+				</ul>
+			</div>
+-->
+			
+			<div style="clear: both; margin: 0 auto; width: 90%">
+				<input type="button" id="randomizePotOne" value="Draw Pot 1" onclick="randomizeSeeding(potOne, potTwo);" class="button" />
+				<input type="button" id="randomizePotTwo" value="Draw Pot 2" onclick="randomizeSeeding(potTwo, potThree);" class="button" />
+				<input type="button" id="randomizePotThree" value="Draw Pot 3" onclick="randomizeSeeding(potThree, potFour);" class="button" />
+				<input type="button" id="randomizePotFour" value="Draw Pot 4" onclick="randomizeSeeding(potFour, potFive);" class="button" />
+				<input type="button" id="randomizePotFive" value="Draw Pot 5" onclick="randomizeSeeding(potFive, potSix);" class="button" />
+				<input type="button" id="randomizePotSix" value="Draw Pot 6" onclick="randomizeSeeding(potSix,);" class="button" />
+			</div>
+		</section>
+		<section id="groups">				
+			<table>
+				<thead class="tableHeader">
+					<tr>
+						<th class="spacer">&nbsp;</th>
+						<th colspan="3"><h3>Group A</h3></th>
+						<th colspan="6" style="padding-left: 1%"><h3>Overall</h3></th>
+						<th colspan="2">&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tableSubheader">
+						<td class="spacer">&nbsp;</td>
+						<td class="pos">POS</td>
+						<td class="team">TEAM</td>
+						<td class="spacer">&nbsp;</td>
+						<td>W</td>
+						<td>D</td>
+						<td>L</td>
+						<td>GF</td>
+						<td>GA</td>
+						<td>GD</td>
+						<td>PTS</td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>1</b></td>
+						<td class="team groupA">Seed One</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>2</b></td>
+						<td class="team groupB">Seed Two</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>3</b></td>
+						<td class="team groupC">Seed Three</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>4</b></td>
+						<td class="team groupD">Seed Four</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+						
+				</tbody>
+			</table>
+			<table>
+				<thead class="tableHeader" >
+					<tr>
+						<th class="spacer">&nbsp;</th>
+						<th colspan="3"><h3>Group B</h3></th>
+						<th colspan="6" style="padding-left: 1%"><h3>Overall</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Home</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Away</h3></th>
+						<th colspan="2">&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tableSubheader">
+						<td class="spacer">&nbsp;</td>
+						<td class="pos">POS</td>
+						<td class="team">TEAM</td>
+						<td class="spacer">&nbsp;</td>
+						<td>W</td>
+						<td>D</td>
+						<td>L</td>
+						<td>GF</td>
+						<td>GA</td>
+						<td class="spacer">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td>GD</td>
+						<td>PTS</td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>1</b></td>
+						<td class="team groupA">Seed One</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>2</b></td>
+						<td class="team groupB">Seed Two</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>3</b></td>
+						<td class="team groupC">Seed Three</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>4</b></td>
+						<td class="team groupD">Seed Four</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>5</b></td>
+						<td class="team groupE">Seed Five</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>6</b></td>
+						<td class="team groupF">Seed Six</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>	
+				</tbody>
+			</table>
+			<table>
+				<thead class="tableHeader" >
+					<tr>
+						<th class="spacer">&nbsp;</th>
+						<th colspan="3"><h3>Group C</h3></th>
+						<th colspan="6" style="padding-left: 1%"><h3>Overall</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Home</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Away</h3></th>
+						<th colspan="2">&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tableSubheader">
+						<td class="spacer">&nbsp;</td>
+						<td class="pos">POS</td>
+						<td class="team">TEAM</td>
+						<td class="spacer">&nbsp;</td>
+						<td>W</td>
+						<td>D</td>
+						<td>L</td>
+						<td>GF</td>
+						<td>GA</td>
+						<td class="spacer">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td>GD</td>
+						<td>PTS</td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>1</b></td>
+						<td class="team groupA">Seed One</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>2</b></td>
+						<td class="team groupB">Seed Two</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>3</b></td>
+						<td class="team groupC">Seed Three</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>4</b></td>
+						<td class="team groupD">Seed Four</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>5</b></td>
+						<td class="team groupE">Seed Five</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>6</b></td>
+						<td class="team groupF">Seed Six</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>	
+				</tbody>
+			</table>
+			<table>
+				<thead class="tableHeader" >
+					<tr>
+						<th class="spacer">&nbsp;</th>
+						<th colspan="3"><h3>Group D</h3></th>
+						<th colspan="6" style="padding-left: 1%"><h3>Overall</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Home</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Away</h3></th>
+						<th colspan="2">&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tableSubheader">
+						<td class="spacer">&nbsp;</td>
+						<td class="pos">POS</td>
+						<td class="team">TEAM</td>
+						<td class="spacer">&nbsp;</td>
+						<td>W</td>
+						<td>D</td>
+						<td>L</td>
+						<td>GF</td>
+						<td>GA</td>
+						<td class="spacer">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td>GD</td>
+						<td>PTS</td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>1</b></td>
+						<td class="team groupA">Seed One</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>2</b></td>
+						<td class="team groupB">Seed Two</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>3</b></td>
+						<td class="team groupC">Seed Three</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>4</b></td>
+						<td class="team groupD">Seed Four</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>5</b></td>
+						<td class="team groupE">Seed Five</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>6</b></td>
+						<td class="team groupF">Seed Six</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>	
+				</tbody>
+			</table>
+			<table>
+				<thead class="tableHeader" >
+					<tr>
+						<th class="spacer">&nbsp;</th>
+						<th colspan="3"><h3>Group E</h3></th>
+						<th colspan="6" style="padding-left: 1%"><h3>Overall</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Home</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Away</h3></th>
+						<th colspan="2">&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tableSubheader">
+						<td class="spacer">&nbsp;</td>
+						<td class="pos">POS</td>
+						<td class="team">TEAM</td>
+						<td class="spacer">&nbsp;</td>
+						<td>W</td>
+						<td>D</td>
+						<td>L</td>
+						<td>GF</td>
+						<td>GA</td>
+						<td class="spacer">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td>GD</td>
+						<td>PTS</td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>1</b></td>
+						<td class="team groupA">Seed One</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>2</b></td>
+						<td class="team groupB">Seed Two</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>3</b></td>
+						<td class="team groupC">Seed Three</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>4</b></td>
+						<td class="team groupD">Seed Four</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>5</b></td>
+						<td class="team groupE">Seed Five</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>6</b></td>
+						<td class="team groupF">Seed Six</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>	
+				</tbody>
+			</table>
+			<table>
+				<thead class="tableHeader" >
+					<tr>
+						<th class="spacer">&nbsp;</th>
+						<th colspan="3"><h3>Group F</h3></th>
+						<th colspan="6" style="padding-left: 1%"><h3>Overall</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Home</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Away</h3></th>
+						<th colspan="2">&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tableSubheader">
+						<td class="spacer">&nbsp;</td>
+						<td class="pos">POS</td>
+						<td class="team">TEAM</td>
+						<td class="spacer">&nbsp;</td>
+						<td>W</td>
+						<td>D</td>
+						<td>L</td>
+						<td>GF</td>
+						<td>GA</td>
+						<td class="spacer">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td>GD</td>
+						<td>PTS</td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>1</b></td>
+						<td class="team groupA">Seed One</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>2</b></td>
+						<td class="team groupB">Seed Two</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>3</b></td>
+						<td class="team groupC">Seed Three</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>4</b></td>
+						<td class="team groupD">Seed Four</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>5</b></td>
+						<td class="team groupE">Seed Five</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>	
+				</tbody>
+			</table>
+			<table>
+				<thead class="tableHeader" >
+					<tr>
+						<th class="spacer">&nbsp;</th>
+						<th colspan="3"><h3>Group G</h3></th>
+						<th colspan="6" style="padding-left: 1%"><h3>Overall</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Home</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Away</h3></th>
+						<th colspan="2">&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tableSubheader">
+						<td class="spacer">&nbsp;</td>
+						<td class="pos">POS</td>
+						<td class="team">TEAM</td>
+						<td class="spacer">&nbsp;</td>
+						<td>W</td>
+						<td>D</td>
+						<td>L</td>
+						<td>GF</td>
+						<td>GA</td>
+						<td class="spacer">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td>GD</td>
+						<td>PTS</td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>1</b></td>
+						<td class="team groupA">Seed One</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>2</b></td>
+						<td class="team groupB">Seed Two</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>3</b></td>
+						<td class="team groupC">Seed Three</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>4</b></td>
+						<td class="team groupD">Seed Four</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>5</b></td>
+						<td class="team groupE">Seed Five</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>	
+				</tbody>
+			</table>
+			<table>
+				<thead class="tableHeader" >
+					<tr>
+						<th class="spacer">&nbsp;</th>
+						<th colspan="3"><h3>Group H</h3></th>
+						<th colspan="6" style="padding-left: 1%"><h3>Overall</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Home</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Away</h3></th>
+						<th colspan="2">&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tableSubheader">
+						<td class="spacer">&nbsp;</td>
+						<td class="pos">POS</td>
+						<td class="team">TEAM</td>
+						<td class="spacer">&nbsp;</td>
+						<td>W</td>
+						<td>D</td>
+						<td>L</td>
+						<td>GF</td>
+						<td>GA</td>
+						<td class="spacer">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td>GD</td>
+						<td>PTS</td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>1</b></td>
+						<td class="team groupA">Seed One</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>2</b></td>
+						<td class="team groupB">Seed Two</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>3</b></td>
+						<td class="team groupC">Seed Three</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>4</b></td>
+						<td class="team groupD">Seed Four</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>5</b></td>
+						<td class="team groupE">Seed Five</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>	
+				</tbody>
+			</table>
+			<table>
+				<thead class="tableHeader" >
+					<tr>
+						<th class="spacer">&nbsp;</th>
+						<th colspan="3"><h3>Group I</h3></th>
+						<th colspan="6" style="padding-left: 1%"><h3>Overall</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Home</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Away</h3></th>
+						<th colspan="2">&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tableSubheader">
+						<td class="spacer">&nbsp;</td>
+						<td class="pos">POS</td>
+						<td class="team">TEAM</td>
+						<td class="spacer">&nbsp;</td>
+						<td>W</td>
+						<td>D</td>
+						<td>L</td>
+						<td>GF</td>
+						<td>GA</td>
+						<td class="spacer">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td>GD</td>
+						<td>PTS</td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>1</b></td>
+						<td class="team groupA">Seed One</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>2</b></td>
+						<td class="team groupB">Seed Two</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>3</b></td>
+						<td class="team groupC">Seed Three</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>4</b></td>
+						<td class="team groupD">Seed Four</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>5</b></td>
+						<td class="team groupE">Seed Five</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>	
+				</tbody>
+			</table>
+			<table>
+				<thead class="tableHeader" >
+					<tr>
+						<th class="spacer">&nbsp;</th>
+						<th colspan="3"><h3>Group J</h3></th>
+						<th colspan="6" style="padding-left: 1%"><h3>Overall</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Home</h3></th>
+						<th colspan="6" class="hide" style="padding-left: 1%"><h3>Away</h3></th>
+						<th colspan="2">&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tableSubheader">
+						<td class="spacer">&nbsp;</td>
+						<td class="pos">POS</td>
+						<td class="team">TEAM</td>
+						<td class="spacer">&nbsp;</td>
+						<td>W</td>
+						<td>D</td>
+						<td>L</td>
+						<td>GF</td>
+						<td>GA</td>
+						<td class="spacer">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">W</td>
+						<td class="hide">D</td>
+						<td class="hide">L</td>
+						<td class="hide">GF</td>
+						<td class="hide">GA</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td>GD</td>
+						<td>PTS</td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>1</b></td>
+						<td class="team groupA">Seed One</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow topTwo">
+						<td class="spacer">&nbsp;</td>
+						<td><b>2</b></td>
+						<td class="team groupB">Seed Two</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>3</b></td>
+						<td class="team groupC">Seed Three</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>4</b></td>
+						<td class="team groupD">Seed Four</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>
+					<tr class="teamRow">
+						<td class="spacer">&nbsp;</td>
+						<td><b>5</b></td>
+						<td class="team groupE">Seed Five</td>
+						<td class="spacer">&nbsp;</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer hide">&nbsp;</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="hide">0</td>
+						<td class="spacer">&nbsp;</td>
+						<td><b>0</b></td>
+						<td><b>0</b></td>
+					</tr>	
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<div class="schedule" style="max-width:90%; margin: 0 auto;">
+				<table class="matchDay" style="width: 33%; margin-right: 0.5%; float: left;">
+					<thead>
+						<tr class="tableHeader">
+							<tr class="tableSubheader">
+							<th style="width: 2%;">&nbsp;</th>
+							<th colspan="2"><h3 style="text-align: left;">Home</h3></th>
+							<th colspan="2"><h3 style="text-align: right">Away</h3></th>
+							<th style="width: 2%;">&nbsp;</th>
+						</tr>
+						</tr>
+					</thead>
+					<tbody>
+						<tr style="height: 30px;">
+							<td style="background: #d1dbdb; width: 2%;">&nbsp;</td>
+							<td style="background: #d1dbdb;" colspan="5"><h3 style="text-align: left; color: #fff;">Group A</h3></td>
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome A1" >A1</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway A5">A5</td>
+							<td class="scheduleBumper">&nbsp;</td>							
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome A3">A3</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway A2">A2</td>
+							<td class="scheduleBumper">&nbsp;</td>
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome A6">A6</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway A4">A4</td>
+							<td class="scheduleBumper">&nbsp;</td>
+						</tr>
+						<tr style="height: 30px;">
+							<td style="background: #d1dbdb; width: 2%;">&nbsp;</td>
+							<td style="background: #d1dbdb;" colspan="5"><h3 style="text-align: left; color: #fff;">Group D</h3></td>
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome D1">D1</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway scheduleD5">D5</td>
+							<td class="scheduleBumper">&nbsp;</td>							
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome D3">D3</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway D2">D2</td>
+							<td class="scheduleBumper">&nbsp;</td>
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome D6">D6</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway D4">D4</td>
+							<td class="scheduleBumper">&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="matchDay" style="width: 33%; margin-right: 0.5%; float: left;">
+					<thead>
+						<tr class="tableSubheader">
+							<th style="width: 2%;">&nbsp;</th>
+							<th colspan="2"><h3 style="text-align: left;">Home</h3></th>
+							<th colspan="2"><h3 style="text-align: right">Away</h3></th>
+							<th style="width: 2%;">&nbsp;</th>
+						</tr>
+					</thead>
+					<tbody>						
+						<tr style="height: 30px;">
+							<td style="background: #d1dbdb; width: 2%;">&nbsp;</td>
+							<td style="background: #d1dbdb;" colspan="5"><h3 style="text-align: left; color: #fff;">Group B</h3></td>
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome scheduleB1">B1</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway scheduleB5">B5</td>
+							<td class="scheduleBumper">&nbsp;</td>							
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome scheduleB3">B3</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway scheduleB2">B2</td>
+							<td class="scheduleBumper">&nbsp;</td>
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome scheduleB6">B6</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway scheduleB4">B4</td>
+							<td class="scheduleBumper">&nbsp;</td>
+						</tr>
+						<tr style="height: 30px;">
+							<td style="background: #d1dbdb; width: 2%;">&nbsp;</td>
+							<td style="background: #d1dbdb;" colspan="5"><h3 style="text-align: left; color: #fff;">Group E</h3></td>
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome scheduleE1">E1</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway scheduleE5">E5</td>
+							<td class="scheduleBumper">&nbsp;</td>							
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome scheduleE3">E3</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway scheduleE2">E2</td>
+							<td class="scheduleBumper">&nbsp;</td>
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome scheduleE6">E6</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway scheduleE4">E4</td>
+							<td class="scheduleBumper">&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="matchDay" style="width: 33%; float: left;">
+					<thead>
+						<tr class="tableSubheader">
+							<th style="width: 2%;">&nbsp;</th>
+							<th colspan="2"><h3 style="text-align: left;">Home</h3></th>
+							<th colspan="2"><h3 style="text-align: right">Away</h3></th>
+							<th style="width: 2%;">&nbsp;</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr style="height: 30px;">
+							<td style="background: #d1dbdb; width: 2%;">&nbsp;</td>
+							<td style="background: #d1dbdb;" colspan="5"><h3 style="text-align: left; color: #fff;">Group C</h3></td>
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome scheduleC1">C1</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway scheduleC5">C5</td>
+							<td class="scheduleBumper">&nbsp;</td>							
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome scheduleC3">C3</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway scheduleC2">C2</td>
+							<td class="scheduleBumper">&nbsp;</td>
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome scheduleC6">C6</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway scheduleC4">C4</td>
+							<td class="scheduleBumper">&nbsp;</td>
+						</tr>
+						<tr style="height: 30px;">
+							<td style="background: #d1dbdb; width: 2%;">&nbsp;</td>
+							<td style="background: #d1dbdb;" colspan="5"><h3 style="text-align: left; color: #fff;">Group F</h3></td>
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome scheduleF1" style="width: 42%;">F1</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway scheduleF5">F5</td>
+							<td class="scheduleBumper">&nbsp;</td>							
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome scheduleF3">F3</td>
+							<td class="scoreHome">0</td>
+							<td class="scoreAway">0</td>
+							<td class="scheduleAway scheduleF2">F2</td>
+							<td class="scheduleBumper">&nbsp;</td>
+						</tr>
+						<tr class="teamRow">
+							<td class="scheduleBumper">&nbsp;</td>
+							<td class="scheduleHome">&nbsp;</td>
+							<td class="scoreHome">&nbsp;</td>
+							<td class="scoreAway">&nbsp;</td>
+							<td class="scheduleAway">&nbsp;</td>
+							<td class="scheduleBumper">&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+		    </div>								
+		</section>
+		
+		<script src="_js/jquery-1.11.0.min.js"></script>
+    	<script src="_js/jquery-ui.js"></script>
+    	<script>
+        	$(function() {
+				$('#groups').accordion();
+        	});
+    	</script>
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
